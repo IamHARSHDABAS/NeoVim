@@ -1,0 +1,11 @@
+local g = vim.g
+local o = vim.o
+local opt = vim.opt
+o.termguicolors = true
+o.scrolloff = 10
+o.number = true
+o.relativenumber = true
+o.tabstop = 4
+o.shiftwidth = 4
+o.list = true
+o.listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
