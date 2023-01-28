@@ -11,13 +11,24 @@ end
 
 local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-nvim-lua'
+	use 'L3MON4D3/LuaSnip'
+	use 'neovim/nvim-lspconfig'
 	use 'nvim-lua/plenary.nvim'
-	use 'nvim-lualine/lualine.nvim'
+	use 'nvim-telescope/telescope.nvim'
 	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-tree/nvim-web-devicons'
 	use 'nvim-treesitter/nvim-treesitter'
-	use 'nvim-telescope/telescope.nvim'
+	use 'rafamadriz/friendly-snippets'
+	use 'saadparwaiz1/cmp_luasnip'
+	use 'VonHeikemen/lsp-zero.nvim'
 	use 'wbthomason/packer.nvim'
+	use 'williamboman/mason-lspconfig.nvim'
+	use 'williamboman/mason.nvim'
 	if packer_bootstrap then
 		require('packer').sync()
 	end

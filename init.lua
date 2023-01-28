@@ -1,3 +1,5 @@
-require('core.base')
-require('core.plugin')
-require('core.plugin-config')
+require('base')
+require('plugin')
+require('config.nvim-tree')
+require('config.telescope')
+require('config.treesitter')
