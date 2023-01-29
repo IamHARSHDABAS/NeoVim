@@ -10,8 +10,7 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 
-vim.opt.termguicolors = true
+vim.opt.cursorline = true
 vim.opt.scrolloff = 10
-
 vim.opt.list = true
 vim.opt.listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
