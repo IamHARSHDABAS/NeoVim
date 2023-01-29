@@ -14,4 +14,4 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 vim.opt.list = true
-vim.opt.listchars =  "space:·,tab:→ ,precedes:◂,extends:▸"
+vim.opt.listchars =  "trail:·,nbsp:◇,tab:→ ,precedes:◂,extends:▸"
