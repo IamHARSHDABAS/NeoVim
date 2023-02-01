@@ -17,17 +17,14 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
+  bg       = '#000000',
+  fg       = '#A14CF6',
+  red      = '#BF5340',
+  green    = '#40BF60',
+  yellow   = '#B9BF40',
+  blue     = '#5940BF',
+  magenta  = '#7F40BF',
+  cyan     = '#40BFAC',
 }
 
 local conditions = {
@@ -89,13 +86,13 @@ local function ins_right(component)
   table.insert(config.sections.lualine_x, component)
 end
 
-ins_left {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue }, -- Sets highlighting of component
-  padding = { left = 0, right = 1 }, -- We don't need space before this
-}
+-- ins_left {
+--   function()
+--     return '▊'
+--   end,
+--   color = { fg = colors.blue }, -- Sets highlighting of component
+--   padding = { left = 0, right = 1 }, -- We don't need space before this
+-- }
 
 ins_left {
   -- mode component
@@ -112,12 +109,12 @@ ins_left {
       V = colors.blue,
       c = colors.magenta,
       no = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      [''] = colors.orange,
+      s = colors.red,
+      S = colors.red,
+      [''] = colors.red,
       ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
+      R = colors.magenta,
+      Rv = colors.magenta,
       cv = colors.red,
       ce = colors.red,
       r = colors.cyan,
@@ -166,7 +163,7 @@ ins_left {
   end,
 }
 
-ins_left {
+ins_right {
   -- Lsp server name .
   function()
     local msg = 'No Active Lsp'
@@ -184,7 +181,7 @@ ins_left {
     return msg
   end,
   icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  color = { fg = '#E5CCFF', gui = 'bold' },
 }
 
 -- Add components to right sections
@@ -205,7 +202,7 @@ ins_right {
 ins_right {
   'branch',
   icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
+  color = { fg = colors.magenta, gui = 'bold' },
 }
 
 ins_right {
@@ -214,19 +211,19 @@ ins_right {
   symbols = { added = ' ', modified = '柳 ', removed = ' ' },
   diff_color = {
     added = { fg = colors.green },
-    modified = { fg = colors.orange },
+    modified = { fg = colors.red },
     removed = { fg = colors.red },
   },
   cond = conditions.hide_in_width,
 }
 
-ins_right {
-  function()
-    return '▊'
-  end,
-  color = { fg = colors.blue },
-  padding = { left = 1 },
-}
+-- ins_right {
+--   function()
+--     return '▊'
+--   end,
+--   color = { fg = colors.blue },
+--   padding = { left = 1 },
+-- }
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
