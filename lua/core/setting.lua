@@ -1,8 +1,9 @@
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.smartindent = false
+vim.opt.smartindent = true
 
+vim.opt.termguicolors = false
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.wrap = false
@@ -21,10 +22,3 @@ vim.opt.backup = false
 
 vim.opt.list = true
 vim.opt.listchars = "tab:│ ,trail:·,extends:▸,precedes:◂"
-
--- Set completeopt to have a better completion experience
-vim.opt.completeopt = 'menuone,noselect'
-
--- Set highlight on search
-vim.opt.hlsearch = false
-
