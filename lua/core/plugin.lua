@@ -22,11 +22,17 @@ return require('packer').startup(function(use)
 	--  Comment
 	use 'numToStr/Comment.nvim'
 	-- Lsp
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'neovim/nvim-lspconfig'
+	use 'williamboman/mason.nvim'
+	use 'williamboman/mason-lspconfig.nvim'
+	use 'neovim/nvim-lspconfig'
 	-- Treesitter
 	use 'nvim-treesitter/nvim-treesitter'
+	-- Telescope
+	use 'nvim-telescope/telescope.nvim'
+	use 'nvim-lua/plenary.nvim'
+	-- TODO
+	-- -- Fuzzy finder
+	-- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	if packer_bootstrap then
 		require('packer').sync()
 	end
