@@ -1,32 +1,30 @@
--- [[ Setting options ]]
--- See `:help vim.o`
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.smartindent = false
+
+vim.opt.cursorline = true
+vim.opt.scrolloff = 10
+vim.opt.wrap = false
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.updatetime = 250
+vim.opt.signcolumn = 'yes'
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+
+vim.opt.list = true
+vim.opt.listchars = "tab:│ ,trail:·,extends:▸,precedes:◂"
+
+-- Set completeopt to have a better completion experience
+vim.opt.completeopt = 'menuone,noselect'
 
 -- Set highlight on search
-vim.o.hlsearch = false
+vim.opt.hlsearch = false
 
--- Make line numbers default
-vim.wo.number = true
-
--- Enable mouse mode
-vim.o.mouse = 'a'
-
--- Enable break indent
-vim.o.breakindent = true
-
--- Save undo history
-vim.o.undofile = true
-
--- Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
--- Decrease update time
-vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
-
--- Set colorscheme
--- vim.o.termguicolors = true
--- vim.cmd [[colorscheme onedark]]
---
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
