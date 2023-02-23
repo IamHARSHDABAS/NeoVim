@@ -17,10 +17,4 @@ require('packer').startup(function(use)
 	-- Telescope
 	use 'nvim-telescope/telescope.nvim'
 	use 'nvim-lua/plenary.nvim'
-	-- TODO
-	-- -- Fuzzy finder
-	-- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-	if packer_bootstrap then
-		require('packer').sync()
-	end
 end)
