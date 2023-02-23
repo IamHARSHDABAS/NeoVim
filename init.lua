@@ -1,2 +1,1 @@
--- require('core')
-require('user')
+require('core')
