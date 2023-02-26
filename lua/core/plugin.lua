@@ -31,4 +31,6 @@ require('packer').startup(function(use)
 	}
 	-- Undotree
 	use 'mbbill/undotree'
+	-- Colorizer
+	use 'NvChad/nvim-colorizer.lua'
 end)
