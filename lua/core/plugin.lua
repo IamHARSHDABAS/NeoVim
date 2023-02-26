@@ -33,4 +33,6 @@ require('packer').startup(function(use)
 	use 'mbbill/undotree'
 	-- Colorizer
 	use 'NvChad/nvim-colorizer.lua'
+	-- Theme
+	use 'IamHARSHDABAS/SweetifyNeoVim'
 end)
