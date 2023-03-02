@@ -9,6 +9,7 @@ require('packer').startup(function(use)
 	}
 	-- Treesitter
 	use 'nvim-treesitter/nvim-treesitter'
+	-- LSP zero
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v1.x',
@@ -29,8 +30,6 @@ require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'}, -- Optional
 		}
 	}
-	-- Undotree
-	use 'mbbill/undotree'
 	-- Colorizer
 	use 'NvChad/nvim-colorizer.lua'
 	-- Theme
