@@ -9,6 +9,8 @@ require('packer').startup(function(use)
 	}
 	-- Treesitter
 	use 'nvim-treesitter/nvim-treesitter'
+	-- Flutter
+	use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 	-- LSP zero
 	use {
 		'VonHeikemen/lsp-zero.nvim',
