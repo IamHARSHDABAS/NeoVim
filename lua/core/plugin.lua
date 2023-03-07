@@ -3,6 +3,8 @@ require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	-- Lualine
   use 'nvim-lualine/lualine.nvim'
+  -- Bufferline
+  use 'akinsho/bufferline.nvim'
   -- Indent
   use 'lukas-reineke/indent-blankline.nvim'
   -- Telescope
