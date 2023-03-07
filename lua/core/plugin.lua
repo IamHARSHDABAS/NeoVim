@@ -9,6 +9,8 @@ require('packer').startup(function(use)
 	}
 	-- Treesitter
 	use 'nvim-treesitter/nvim-treesitter'
+  -- Flutter
+  use 'akinsho/flutter-tools.nvim'
 	-- LSP zero
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -30,8 +32,6 @@ require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'}, -- Optional
 		}
 	}
-	-- Colorizer
-	use 'NvChad/nvim-colorizer.lua'
 	-- Theme
 	use 'IamHARSHDABAS/SweetifyNeoVim'
 end)
