@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
   use 'akinsho/bufferline.nvim'
   -- Indent
   use 'lukas-reineke/indent-blankline.nvim'
+  -- Autopairs
+  use 'windwp/nvim-autopairs'
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
