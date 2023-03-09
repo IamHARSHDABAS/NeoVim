@@ -13,7 +13,9 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'nvim-lua/plenary.nvim'
   use 'IamHARSHDABAS/SweetifyNeoVim'
+  use 'akinsho/flutter-tools.nvim'
   use   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
