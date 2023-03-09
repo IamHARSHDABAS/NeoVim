@@ -1,2 +1,3 @@
-require('lazy').setup({
+require("lazy").setup({
+	{"IamHARSHDABAS/SweetifyNeoVim"}
 })

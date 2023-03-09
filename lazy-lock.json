@@ -1,3 +1,4 @@
 {
+  "SweetifyNeoVim": { "branch": "master", "commit": "dbe6cc00235f92354e4e94676b0cfa18e6ca6336" },
   "lazy.nvim": { "branch": "main", "commit": "5b4444f0d7e556deba3f7ca949a2ba0e2c3369fb" }
 }
