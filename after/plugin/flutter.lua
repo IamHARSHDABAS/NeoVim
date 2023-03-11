@@ -1,8 +1,27 @@
-require("flutter-tools").setup{
+require("flutter-tools").setup {
   widget_guides = {
     enabled = true,
   },
-  outline = {
-    auto_open = true -- if true this will open the outline automatically when it is first populated
+  closing_tags = {
+    highlight = "ErrorMsg",
+    prefix = "",
+    enabled = true
   },
+  lsp = {
+    color = {
+      enabled = true,
+      background = true,
+      background_color = nil,
+      foreground = false,
+      virtual_text = true,
+      virtual_text_str = "■",
+    },
+    settings = {
+      showTodos = true,
+      completeFunctionCalls = true,
+      analysisExcludedFolders = {"<path-to-flutter-sdk-packages>"},
+      renameFilesWithClasses = "prompt",
+      enableSnippets = true,
+    }
+  }
 }
