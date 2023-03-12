@@ -4,7 +4,7 @@ require("flutter-tools").setup {
   },
   closing_tags = {
     highlight = "ErrorMsg",
-    prefix = "",
+    prefix = "=>",
     enabled = true
   },
   lsp = {
