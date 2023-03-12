@@ -1,7 +1,7 @@
 local cmp = require'cmp'
 local luasnip = require'luasnip'
 
-require("luasnip/loaders/from_vscode").lazy_load()
+require('luasnip.loaders.from_vscode').lazy_load()
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -103,10 +103,10 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "nvim_lsp" },
-    { name = "luasnip" },
-    { name = "buffer" },
-    { name = "path" },
+    { name = 'luasnip', priority = 40 },
+    { name = 'nvim_lsp', priority = 30 },
+    { name = 'buffer', priority = 20 },
+    { name = 'path', priority = 10 },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
