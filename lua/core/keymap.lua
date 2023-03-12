@@ -19,6 +19,9 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Normal --
+-- Flutter
+keymap("n", "<leader>r", ":FlutterRun<CR>", opts)
+keymap("n", "<leader>o", [[<Cmd>lua require('telescope').extensions.flutter.commands()<CR>]], opts)
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
