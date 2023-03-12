@@ -1,45 +1,23 @@
-local lsp = require('lsp-zero').preset({
-  name = 'minimal',
-  set_lsp_keymaps = true,
-  manage_nvim_cmp = true,
-  suggest_lsp_servers = true,
+require('mason').setup()
+
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    -- Replace these with whatever servers you want to install
+    'lua_ls',
+  }
 })
 
-local dart_lsp = lsp.build_options('dartls', {})
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lsp_attach = function(client, bufnr)
+  -- Create your keybindings here...
+end
 
-require("flutter-tools").setup {
-  widget_guides = {
-    enabled = true,
-  },
-  closing_tags = {
-    highlight = "ErrorMsg",
-    prefix = "",
-    enabled = true
-  },
-  lsp = {
-    color = {
-      enabled = true,
-      background = true,
-      background_color = nil,
-      foreground = false,
-      virtual_text = true,
-      virtual_text_str = "■",
-    },
-    capabilities = dart_lsp.capabilities,
-    settings = {
-      showTodos = true,
-      completeFunctionCalls = true,
-      analysisExcludedFolders = {"<path-to-flutter-sdk-packages>"},
-      renameFilesWithClasses = "prompt",
-      enableSnippets = true,
-    }
-  }
-}
-
-lsp.nvim_workspace()
-
-lsp.setup()
-
-vim.diagnostic.config({
-  virtual_text = true
+local lspconfig = require('lspconfig')
+require('mason-lspconfig').setup_handlers({
+  function(server_name)
+    lspconfig[server_name].setup({
+      on_attach = lsp_attach,
+      capabilities = lsp_capabilities,
+    })
+  end,
 })
