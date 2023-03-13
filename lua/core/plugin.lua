@@ -23,8 +23,6 @@ return require('packer').startup(function(use)
   -- UX
   use 'windwp/nvim-autopairs'
   use 'nvim-telescope/telescope.nvim'
-  -- Flutter
-  use 'akinsho/flutter-tools.nvim'
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/mason.nvim'
