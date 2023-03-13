@@ -7,10 +7,6 @@ require("flutter-tools").setup {
     prefix = "=>",
     enabled = true
   },
-  outline = {
-    open_cmd = "30vnew",
-    auto_open = true
-  },
   lsp = {
     color = {
       enabled = true,
